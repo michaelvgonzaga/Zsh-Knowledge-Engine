@@ -1,4 +1,4 @@
-🔥 ### Zsh Knowledge Engine (ZKE)
+🔥 ###Zsh Knowledge Engine (ZKE)
 
 A lightweight, fully offline, zero-dependency system for organizing reusable code, snippets, templates, debugging steps, workflows, and automation directly inside your Zsh environment.
 
