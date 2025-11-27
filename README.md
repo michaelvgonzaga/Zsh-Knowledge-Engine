@@ -1,10 +1,10 @@
-🔥 Zsh Knowledge Engine (ZKE)
+🔥# Zsh Knowledge Engine (ZKE)
 
 A lightweight, fully offline, zero-dependency system for organizing reusable code, snippets, templates, debugging steps, workflows, and automation directly inside your Zsh environment.
 
 Every .zsh file inside the knowledge base becomes an executable function loaded automatically by Zsh.
 
-📌 Overview
+📌# Overview
 
 Instead of scattering notes across apps and documents, the Zsh Knowledge Engine lets you store knowledge as functions you can execute instantly from your terminal.
 
@@ -32,7 +32,7 @@ personal knowledge
 
 ZKE turns your terminal into a knowledge superpower.
 
-✨ Features
+✨# Features
 
 Fully offline and private
 
