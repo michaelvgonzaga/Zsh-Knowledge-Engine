@@ -1,10 +1,10 @@
-🔥 Zsh Knowledge Engine (ZKE)
+🔥 ### Zsh Knowledge Engine (ZKE)
 
 A lightweight, fully offline, zero-dependency system for organizing reusable code, snippets, templates, debugging steps, workflows, and automation directly inside your Zsh environment.
 
 Every .zsh file inside the knowledge base becomes an executable function loaded automatically by Zsh.
 
-📌 Overview
+📌  ### Overview
 
 Instead of scattering notes across apps and documents, the Zsh Knowledge Engine lets you store knowledge as functions you can execute instantly from your terminal.
 
@@ -32,7 +32,7 @@ personal knowledge
 
 ZKE turns your terminal into a knowledge superpower.
 
-✨ Features
+✨  ### Features
 
 Fully offline and private
 
@@ -70,7 +70,7 @@ Inside it, create any structure you want:
 There is no limit.
 Any .zsh file at any depth will be discovered and sourced automatically.
 
-🚀 Installation
+🚀  ### Installation
 
 You can place your knowledge base anywhere:
 
@@ -126,7 +126,7 @@ You can load several KBs:
 
 Zsh will merge all .kb/** contents into your environment.
 
-🔧 Loader (load.zsh)
+🔧  ### Loader (load.zsh)
 
 A universal loader that recursively sources all .zsh files:
 
@@ -145,7 +145,7 @@ done
 
 If you use multiple KB repos, each repo should have its own load.zsh.
 
-✍️ Creating a Snippet Function
+✍️  ### Creating a Snippet Function
 
 Create a file, e.g.:
 
@@ -168,7 +168,7 @@ Use it:
 
 kb_example
 
-🔎 Listing Available KB Functions
+🔎  ### Listing Available KB Functions
 
 List all loaded ZKE functions:
 
