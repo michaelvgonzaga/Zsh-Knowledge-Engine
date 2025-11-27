@@ -6,49 +6,34 @@ Every .zsh file inside the knowledge base becomes an executable function loaded 
 Instead of scattering notes across apps and documents, the Zsh Knowledge Engine lets you store knowledge as functions you can execute instantly from your terminal.
 
 Perfect for:
-
 - command snippets
 - templates
 - code scaffolds
 - debugging steps
 - DevOps helpers
-
-Pantheon workflows
-
-chat replies
-
-automation
-
-mental models
-
-personal knowledge
+- Workflows
+- Chat replies
+- Automation
+- Mental models
+- Personal knowledge
 
 ZKE turns your terminal into a knowledge superpower.
 
-✨# Features
+# Features
+- Fully offline and private
+- Zero dependencies (pure Zsh)
+- Auto-loads all .zsh files at startup
+- Unlimited folder nesting
+- Escape-safe templates using cat << 'EOF'
+- Modular and extensible
+- Works across multiple repositories
+- Fast, lightweight, and portable
 
-Fully offline and private
-
-Zero dependencies (pure Zsh)
-
-Auto-loads all .zsh files at startup
-
-Unlimited folder nesting
-
-Escape-safe templates using cat << 'EOF'
-
-Modular and extensible
-
-Works across multiple repositories
-
-Fast, lightweight, and portable
-
-📁 Folder Structure
-
+# Folder Structure
 A ZKE expects at least one .kb folder.
 
 Inside it, create any structure you want:
-
+```sh
 .kb/
   devops/
   chat/
@@ -58,71 +43,59 @@ Inside it, create any structure you want:
     frontend/
   pantheon/
   misc/
-
+```
 
 There is no limit.
 Any .zsh file at any depth will be discovered and sourced automatically.
 
-🚀 Installation
-
+# Installation
 You can place your knowledge base anywhere:
 
-In your home directory
-
-Inside a project repo (recommended)
-
-In multiple repos for different contexts (personal, work, etc.)
-
-Below are the supported patterns.
-
-Option 1: Install KB at ~/.kb (default)
-
-Clone:
-
-git clone https://github.com/yourname/yourrepo ~/.kb
-
-
-Add this to your ~/.zshrc:
-
-[[ -f "$HOME/.kb/load.zsh" ]] && source "$HOME/.kb/load.zsh"
-
+- In your home directory
+- Inside a project repo (recommended)
+- In multiple repos for different contexts (personal, work, etc.)
+- Below are the supported patterns.
+  * Option 1: Install KB at ~/.kb (default)
+    Clone:
+    ```sh
+    git clone https://github.com/yourname/yourrepo ~/.kb
+    ```
+  Add this to your ~/.zshrc:
+```sh
+   [[ -f "$HOME/.kb/load.zsh" ]] && source "$HOME/.kb/load.zsh"
+```
 
 Reload:
-
+```sh
 source ~/.zshrc
+```
 
-Option 2: KB Inside a Repo (recommended)
-
-If your .kb folder lives inside a repo like:
-
-~/your_folder_name/.kb
-
-
-add this to your ~/.zshrc:
-
-# Load Knowledge Base inside this repo
+  * Option 2: KB Inside a Repo (recommended)
+    If your .kb folder lives inside a repo like:
+    ```sh
+    ~/your_folder_name/.kb
+    ```
+    add this to your ~/.zshrc:
+````sh
+    # Load Knowledge Base inside this repo
 [[ -f "$HOME/your_folder_name/load.zsh" ]] && source "$HOME/your_folder_name/load.zsh"
+````
+  This way, your knowledge base travels with the repo.
 
-
-This way, your knowledge base travels with the repo.
-
-Option 3: Multiple Knowledge Bases
-
-You can load several KBs:
-
+  * Option 3: Multiple Knowledge Bases
+    You can load several KBs:
+````sh
 # Personal KB
 [[ -f "$HOME/your_folder_name/load.zsh" ]] && source "$HOME/your_folder_name/load.zsh"
-
 # Work / Pantheon KB
 [[ -f "$HOME/another_folder_name/load.zsh" ]] && source "$HOME/another_folder_name/load.zsh"
-
-
+````
 Zsh will merge all .kb/** contents into your environment.
 
-🔧 Loader (load.zsh)
+# Loader (load.zsh)
 
 A universal loader that recursively sources all .zsh files:
-
+````sh
 #!/bin/zsh
 
 # Path to this repo’s .kb folder
@@ -134,19 +107,19 @@ setopt extendedglob null_glob
 for file in "$KB_DIR"/**/*.zsh(.N); do
   source "$file"
 done
-
+````
 
 If you use multiple KB repos, each repo should have its own load.zsh.
 
-✍️ Creating a Snippet Function
+# Creating a Snippet Function
 
 Create a file, e.g.:
-
+```sh
 .kb/misc/example.zsh
-
+```
 
 Add:
-
+````sh
 kb_example() {
   cat << 'EOF'
 This is a multiline, escape-safe snippet.
@@ -155,45 +128,40 @@ Backslashes: \n \t \\
 Dollar signs: $PATH $HOME
 EOF
 }
-
+````
 
 Use it:
-
+```sh
 kb_example
+```
 
-🔎 Listing Available KB Functions
+$ Listing Available KB Functions
 
 List all loaded ZKE functions:
-
+```sh
 typeset -f | grep "^kb_"
-
+```
 
 List all .zsh files in the KB:
-
+```sh
 find ~/.kb -type f -name "*.zsh"
-
+```
 
 Or, if your KB is inside a repo:
-
+```sh
 find ~/your_folder_name/.kb -type f -name "*.zsh"
-
-🤔 Why This Exists
-
-Most knowledge systems store information in passive notes.
-
-ZKE stores executable knowledge:
-
-ready-to-run functions
-
-repeatable workflows
-
-reusable templates
-
-automation-on-demand
-
+```
+# Why This Exists
+- Most knowledge systems store information in passive notes.
+- ZKE stores executable knowledge:
+- ready-to-run functions
+- repeatable workflows
+- reusable templates
+- automation-on-demand
+- 
 It grows with your workflow and becomes a powerful tool for development, operations, learning, and everyday life.
 
-📜 License
+# License
 
 MIT License
 Fork, enhance, reuse, and adapt freely.
