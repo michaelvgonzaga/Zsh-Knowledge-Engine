@@ -41,7 +41,7 @@ Inside it, create any structure you want:
   web/
     backend/
     frontend/
-  pantheon/
+  platform/
   misc/
 ```
 
@@ -87,7 +87,7 @@ source ~/.zshrc
 ````sh
 # Personal KB
 [[ -f "$HOME/your_folder_name/load.zsh" ]] && source "$HOME/your_folder_name/load.zsh"
-# Work / Pantheon KB
+# Work / Platform KB
 [[ -f "$HOME/another_folder_name/load.zsh" ]] && source "$HOME/another_folder_name/load.zsh"
 ````
 Zsh will merge all .kb/** contents into your environment.
