@@ -60,7 +60,7 @@ You can place your knowledge base anywhere:
     ```sh
     git clone https://github.com/yourname/yourrepo ~/.kb
     ```
-  Add this to your ~/.zshrc:
+ * Option 1:  If not available, add this to your ~/.zshrc:
 ```sh
    [[ -f "$HOME/.kb/load.zsh" ]] && source "$HOME/.kb/load.zsh"
 ```
