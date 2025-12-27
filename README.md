@@ -27,7 +27,7 @@ Every `.zsh` file inside `.kb/` becomes a real command you can run instantly.
 [[ -f "$HOME/inhouse_zke/load.zsh" ]] && source "$HOME/inhouse_zke/load.zsh"
 ```
 
-# Folder Laoyut
+# Folder Layout
 
 ```zsh
 .kb/
